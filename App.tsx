@@ -13,7 +13,7 @@ export default function App() {
           Alert.alert("CLICK!!", "Toque Finalizado")
         }}
       >
-        <Text style={[styles.texto]}>BOTÃO</Text>
+        <Text style={[styles.texto, styles.border]}>BOTÃO</Text>
       </View>
 
       <Text
@@ -22,7 +22,7 @@ export default function App() {
       
       <Text>
         <Text>Olá</Text>
-        <Text>Mundo</Text>
+        <Text> Mundo</Text>
       </Text>
 
       <View>
@@ -41,13 +41,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  border: {
+    borderColor: 'blue',
+    borderWidth: 3,
+    borderRadius:20,
+  },
   texto: {
     fontSize: 20,
     fontWeight: 'bold',
     backgroundColor: 'yellow',
     padding: 25,
-    borderRadius: 15,
-    borderWidth: 1,
     marginBottom: 15,
     textAlign: 'center',
   },
