@@ -16,7 +16,9 @@ export default function App() {
         <Text style={[styles.texto]}>BOTÃO</Text>
       </View>
 
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text
+        selectable={true}
+      >Open up App.tsx to start working on your app!</Text>
     </View>
   );
 }
@@ -36,5 +38,6 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     borderWidth: 1,
     marginBottom: 15,
+    textAlign: 'center',
   },
 });
