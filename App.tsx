@@ -4,6 +4,7 @@ import { Alert, StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
+      <StatusBar style="auto" />
       <View 
         onTouchStart={(event)=>{
           Alert.alert('Clicando...', "Toque iniciado")
@@ -12,10 +13,10 @@ export default function App() {
           Alert.alert("CLICK!!", "Toque Finalizado")
         }}
       >
-        <Text>BOTÃO</Text>
+        <Text style={[styles.texto]}>BOTÃO</Text>
       </View>
+
       <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -26,5 +27,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  texto: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    backgroundColor: 'yellow',
+    padding: 25,
+    borderRadius: 15,
+    borderWidth: 1,
+    marginBottom: 15,
   },
 });
