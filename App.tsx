@@ -1,9 +1,11 @@
+import React,{ useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { Alert, StyleSheet, Text, View, Image, TextInput, Button } from 'react-native';
 
 import ImageReact from './assets/logo-react.png';
 
 export default function App() {
+  const [usuario, setUsuario] = useState('')
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -14,9 +16,15 @@ export default function App() {
 
       <TextInput
         style={[styles.input]}
-        onChange={(event)=>console.log(event.nativeEvent.text)}
+        onChange={(text)=>setUsuario(text.nativeEvent.text)}
         keyboardType='phone-pad'
         placeholder='Digite o Numero'
+        value={usuario}
+      />
+
+      <Button
+        title='Clicar'
+        onPress={()=> {Alert.alert('valor atual ', usuario)}}
       />
 
       <View 
