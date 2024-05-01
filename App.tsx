@@ -1,10 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, View, Image, TextInput } from 'react-native';
+
+import ImageReact from './assets/logo-react.png';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
+
+      <Image
+        source={ImageReact}
+      />
+
+      <TextInput
+        style={[styles.input]}
+        onChange={()=>console.log("Digitando")}
+        keyboardType='phone-pad'
+        placeholder='Digite o Numero'
+      />
+
       <View 
         onTouchStart={(event)=>{
           Alert.alert('Clicando...', "Toque iniciado")
@@ -39,9 +53,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'gray',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 5,
+    backgroundColor: '#fff'
   },
   border: {
     borderColor: 'blue',
