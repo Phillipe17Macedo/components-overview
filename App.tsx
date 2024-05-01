@@ -14,7 +14,7 @@ export default function App() {
 
       <TextInput
         style={[styles.input]}
-        onChange={()=>console.log("Digitando")}
+        onChange={(event)=>console.log(event.nativeEvent.text)}
         keyboardType='phone-pad'
         placeholder='Digite o Numero'
       />
