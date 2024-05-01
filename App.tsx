@@ -19,6 +19,17 @@ export default function App() {
       <Text
         selectable={true}
       >Open up App.tsx to start working on your app!</Text>
+      
+      <Text>
+        <Text>Olá</Text>
+        <Text>Mundo</Text>
+      </Text>
+
+      <View>
+        <Text>Olá</Text>
+        <Text>Mundo</Text>
+      </View>
+
     </View>
   );
 }
