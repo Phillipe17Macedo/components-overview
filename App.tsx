@@ -1,17 +1,28 @@
 import React,{ useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, View, Image, TextInput, Button } from 'react-native';
+import { Alert, StyleSheet, Text, View, Image, TextInput, Button, Switch } from 'react-native';
 
 import ImageReact from './assets/logo-react.png';
 
 export default function App() {
   const [usuario, setUsuario] = useState('')
+  const [ligado, setLigado] = useState(true)
+
+function handleSwtich(){
+  setLigado(!ligado)
+}
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-
+      <Switch 
+        value={ligado}
+        onValueChange={handleSwtich}
+        >
+      </Switch>
       <Image
         source={ImageReact}
+        style={{display: ligado ? "flex" : "none"}}
       />
 
       <TextInput
